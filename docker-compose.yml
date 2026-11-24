@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: gills-driving-school:latest
+    container_name: gills-driving-school
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:80"
